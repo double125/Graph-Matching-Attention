@@ -2,7 +2,8 @@
 
 Graph Matching Attention: Official Pytorch Implementation
 
-Our Papers: Bilateral Cross-Modality Graph Matching Attention for Feature Fusion in Visual Question Answering
+Our Papers: 
+《Bilateral Cross-Modality Graph Matching Attention for Feature Fusion in Visual Question Answering》
 
 This is the first version of the code of Graph Matching Attention.
 
