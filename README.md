@@ -20,10 +20,10 @@ TODO:
 ![Modules of Graph Matching Attention](https://github.com/double125/Graph-Matching-Attention/raw/master/figures/GMA%20Module.png)
 
 ## Getting Started
-pytorch (0.3.1) (with CUDA)
-zarr (2.2.0)
-tdqm
-spacy
+  pytorch (0.3.1) (with CUDA)
+  zarr (2.2.0)
+  tdqm
+  spacy
 
 ## Data
 
