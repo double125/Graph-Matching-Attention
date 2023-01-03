@@ -47,7 +47,7 @@ and to train a model on the train and validation set for evaluation on the test 
 ```
 python3 -u train.py --trainval --bsize 256 --data_type VQA --data_dir ../data/VQA --save_dir ./trained_model
 ```
-
+## Evaluation
 Models can be validated via
 ```
 python3 -u train.py --eval --model_path ./trained_model/model.pth.tar --data_type VQA --data_dir ../data/VQA --bsize 256
@@ -57,8 +57,23 @@ and a json of results from the test set can be produced with
 ```
 python3 -u train.py --test --model_path ./trained_model/model.pth.tar --data_type VQA --data_dir ../data/VQA --bsize 256
 ```
+## Cite This
+We hope our paper, data and code can help in your research. If this is the case, please cite:
+```
+@ARTICLE{Cao2022GMA,
+  author={Cao, Jianjian and Qin, Xiameng and Zhao, Sanyuan and Shen, Jianbing},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={Bilateral Cross-Modality Graph Matching Attention for Feature Fusion in Visual Question Answering}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-12},
+  doi={10.1109/TNNLS.2021.3135655}}
+```
 
 ## Acknowledgements
 Our code is based on this implementation of [Learning Conditioned Graph Structures for Interpretable Visual Question Answering](https://github.com/aimbrain/vqa-project)
 
+## Contact Us
+If you have any problem about this work, please feel free to reach us out at caojianjianbit@gmail.com.
 
