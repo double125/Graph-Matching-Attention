@@ -58,7 +58,7 @@ and a json of results from the test set can be produced with
 ```
 python3 -u train.py --test --model_path ./trained_model/model.pth.tar --data_type VQA --data_dir ../data/VQA --bsize 256
 ```
-## Cite This
+## Citation
 We hope our paper, data and code can help in your research. If this is the case, please cite:
 ```
 @ARTICLE{Cao2022GMA,
