@@ -21,8 +21,11 @@ TODO:
 
 ## Getting Started
   pytorch (0.3.1) (with CUDA)
+  
   zarr (2.2.0)
+  
   tdqm
+  
   spacy
 
 ## Data
