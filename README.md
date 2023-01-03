@@ -20,17 +20,16 @@ TODO:
 ![Modules of Graph Matching Attention](https://github.com/double125/Graph-Matching-Attention/raw/master/figures/GMA%20Module.png)
 
 ## Getting Started
-  pytorch (0.3.1) (with CUDA)
-  
-  zarr (2.2.0)
-  
-  tdqm
-  
-  spacy
+  * [pytorch (0.3.1) (with CUDA)](https://pytorch.org/)
+  * [zarr (2.2.0)](https://github.com/zarr-developers/zarr)
+  * [tdqm](https://github.com/tqdm/tqdm)
+  * [spacy](https://spacy.io/usage/)
 
 ## Data
-
 To download and unzip the required datasets, change to the data folder and run
+‘’‘
+cd data; python download_data.py
+’‘’
 
 ## Training
 
