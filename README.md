@@ -24,6 +24,7 @@ TODO:
   * [zarr (2.2.0)](https://github.com/zarr-developers/zarr)
   * [tdqm](https://github.com/tqdm/tqdm)
   * [spacy](https://spacy.io/usage/)
+  * [stanfordcorenlp](https://www.jianshu.com/p/c93fb950c2b3)
 
 ## Data
 To download and unzip the required datasets, change to the data folder and run
