@@ -2,13 +2,29 @@
 
 This code provides a pytorch implementation of our Graph Matching Attention method for Visual Question Answering as described in [Bilateral Cross-Modality Graph Matching Attention for Feature Fusion in Visual Question Answering](https://arxiv.org/pdf/2112.07270.pdf)
 
-Our Papers: 
-《[Bilateral Cross-Modality Graph Matching Attention for Feature Fusion in Visual Question Answering](https://arxiv.org/pdf/2112.07270.pdf)》
-
-This is the first version of the code of Graph Matching Attention.
-
 TODO:
 1. The note of VQA & GQA dataset process
 2. Result Table (which can find in our paper)
 3. Trained models release.
 4. Other details.
+
+## Model diagram
+
+This is the first version of the code of Graph Matching Attention.
+
+## Getting Started
+pytorch (0.3.1) (with CUDA)
+zarr (2.2.0)
+tdqm
+spacy
+
+## Data
+
+To download and unzip the required datasets, change to the data folder and run
+
+## Training
+
+## Acknowledgements
+Our code is based on this implementation of [Learning Conditioned Graph Structures for Interpretable Visual Question Answering](https://github.com/aimbrain/vqa-project)
+
+
