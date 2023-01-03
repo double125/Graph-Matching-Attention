@@ -9,9 +9,14 @@ TODO:
 4. Other details.
 
 ## Model diagram
-This is the first version of the code of Graph Matching Attention.
+  This is the first version of the code of Graph Matching Attention.
+### Pipeline of Graph Matching Attention
 ![Pipeline of Graph Matching Attention](https://github.com/double125/Graph-Matching-Attention/raw/master/figures/GMA%20Pipeline.png)
+
+### Framework of Graph Matching Attention
 ![Framework of Graph Matching Attention](https://github.com/double125/Graph-Matching-Attention/raw/master/figures/GMA%20Framework.png)
+
+### Modules of Graph Matching Attention
 ![Modules of Graph Matching Attention](https://github.com/double125/Graph-Matching-Attention/raw/master/figures/GMA%20Module.png)
 
 ## Getting Started
