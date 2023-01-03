@@ -29,7 +29,7 @@ TODO:
 To download and unzip the required datasets, change to the data folder and run
 
 
-' cd data; python download_data.py '
+'<cd data; python download_data.py>'
 
 
 ## Training
