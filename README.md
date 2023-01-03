@@ -1,6 +1,6 @@
 # Graph-Matching-Attention
 
-Graph Matching Attention: Official Pytorch Implementation
+This code provides a pytorch implementation of our Graph Matching Attention method for Visual Question Answering as described in [Bilateral Cross-Modality Graph Matching Attention for Feature Fusion in Visual Question Answering](https://arxiv.org/pdf/2112.07270.pdf)
 
 Our Papers: 
 《[Bilateral Cross-Modality Graph Matching Attention for Feature Fusion in Visual Question Answering](https://arxiv.org/pdf/2112.07270.pdf)》
