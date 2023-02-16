@@ -56,8 +56,8 @@ For ease-of-use, we use the [pretrained features](https://github.com/peteanderso
 ### VG dataset
 we use extra data from [Visual Genome](http://visualgenome.org/). The question and answer pairs can be downloaded from the links below,
 * [visualgenome_qa.zip](https://drive.google.com/file/d/1QKe4TKiYnn4pk_48z_mLxF7xaf2VH8Ut/view?usp=sharing)
-* [image_data.json](https://drive.google.com/file/d/1UEaC5zmDQdR5Q-pqAj9f3zSunD0-Uhgd/view?usp=share_link)
-* [question_answers.json](https://drive.google.com/file/d/1Od5d5Nv7NyodABsx1WOQtbS5ZFfd8EqN/view?usp=sharing)
+* [image_data.json.zip](https://drive.google.com/file/d/1SLvZ9GbnRMCM-MmJBBP4OGjuDeTMsEBF/view?usp=sharing)
+* [question_answers.json.zip](https://drive.google.com/file/d/16RYCz58WxKf7INk3ai268fXIfjr5Czqy/view?usp=sharing)
 * [imgids.zip](https://drive.google.com/file/d/1X7xcbKDZB6oSe_qLwrVAGn9Zz3rcjxo-/view?usp=sharing)
 
 ## GQA dataset
