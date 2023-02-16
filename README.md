@@ -50,6 +50,12 @@ For ease-of-use, we use the [pretrained features](https://github.com/peteanderso
 * [2014 Testing Image Features (40K / 9GB)](https://storage.googleapis.com/up-down-attention/test2014_36.zip)
 * [2015 Testing Image Features (80K / 17GB)](https://storage.googleapis.com/up-down-attention/test2015_36.zip)
 
+### VG dataset
+we use extra data from [Visual Genome](http://visualgenome.org/). The question and answer pairs can be downloaded from the links below,
+* [visualgenome_qa.zip](https://drive.google.com/file/d/1QKe4TKiYnn4pk_48z_mLxF7xaf2VH8Ut/view?usp=sharing)
+* [image_data.json](https://drive.google.com/file/d/1UEaC5zmDQdR5Q-pqAj9f3zSunD0-Uhgd/view?usp=share_link)
+* [question_answers.json](https://drive.google.com/file/d/1Od5d5Nv7NyodABsx1WOQtbS5ZFfd8EqN/view?usp=sharing)
+
 ## Training
 To train a model on the train set with our default parameters run
 ```
