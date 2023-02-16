@@ -37,6 +37,17 @@ To preprocess the image data and text data the following commands can be execute
 ``` 
 sh build_graph.sh
 ```
+### Pretrained features for VQA dataset
+For ease-of-use, we use the [pretrained features](https://github.com/peteanderson80/bottom-up-attention#pretrained-features) available for the entire MSCOCO dataset. Features are stored in tsv (tab-separated-values) format that can be downloaded from the links below,
+10 to 100 features per image (adaptive):
+* [2014 Train/Val Image Features (120K / 23GB)](https://storage.googleapis.com/up-down-attention/trainval.zip)
+* [2014 Testing Image Features (40K / 7.3GB)](https://storage.googleapis.com/up-down-attention/test2014.zip)
+* [2015 Testing Image Features (80K / 15GB)](https://storage.googleapis.com/up-down-attention/test2015.zip)
+
+36 features per image (fixed):
+* [2014 Train/Val Image Features (120K / 25GB)](https://storage.googleapis.com/up-down-attention/trainval_36.zip)
+* [2014 Testing Image Features (40K / 9GB)](https://storage.googleapis.com/up-down-attention/test2014_36.zip)
+* [2015 Testing Image Features (80K / 17GB)](https://storage.googleapis.com/up-down-attention/test2015_36.zip)
 
 ## Training
 To train a model on the train set with our default parameters run
