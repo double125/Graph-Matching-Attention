@@ -50,15 +50,15 @@ class VQA_Graph_Dataset(Dataset):
         self.sizes = pd.read_csv(os.path.join(
             data_dir, 'vg_100/trainval_image_size.csv'))
         self.visual_graph = pickle.load(
-                open(os.path.join(data_dir, 'question_graph/visual_graph/trainval_visual_graph_1_03.pkl'), 'rb'))
+                open(os.path.join(data_dir, 'visual_graph/vg_100/trainval_visual_graph_1_03.pkl'), 'rb'))
 
         # Load questions
         if train:
             self.vqa = json.load(
-                open(os.path.join(data_dir, 'question_graph/train_data/vqa_train_final_3129_q_graph.json')))
+                open(os.path.join(data_dir, 'question_graph/train_data/vqa_train_q_graph.json')))
         else:
             self.vqa = json.load(
-                open(os.path.join(data_dir, 'question_graph/train_data/vqa_val_final_3129_q_graph.json')))
+                open(os.path.join(data_dir, 'question_graph/train_data/vqa_val_q_graph.json')))
 
         self.n_questions = len(self.vqa)
 
@@ -228,7 +228,7 @@ class VQA_Graph_Dataset_Test(Dataset):
 
         if train:
             # Data augment with Visual Genome
-            self.vqa = json.load(open(os.path.join(data_dir, 'question_graph/trainval_data/vqa_trainval_q_graph.json'))) + json.load(open(os.path.join(data_dir, 'question_graph/vg_aug_train_q_graph.json'))) + json.load(open(os.path.join(data_dir, 'question_graph/vg_aug_val_q_graph.json')))
+            self.vqa = json.load(open(os.path.join(data_dir, 'question_graph/trainval_data/vqa_trainval_q_graph.json'))) + json.load(open(os.path.join(data_dir, 'question_graph/trainval_data/vg_aug_train_q_graph.json'))) + json.load(open(os.path.join(data_dir, 'question_graph/trainval_data/vg_aug_val_q_graph.json')))
 
             # No data augment with VG
             #self.vqa = json.load(open(os.path.join(data_dir, 'question_graph/trainval_data/vqa_trainval_final_3129_q_graph.json')))
@@ -240,11 +240,11 @@ class VQA_Graph_Dataset_Test(Dataset):
             self.sizes = pd.read_csv(os.path.join(
                 data_dir, 'vg_100/trainval_image_size.csv'))
             self.visual_graph = pickle.load(
-                    open(os.path.join(data_dir, 'question_graph/visual_graph/trainval_visual_graph_1_03.pkl'), 'rb'))
+                    open(os.path.join(data_dir, 'visual_graph/vg_100/trainval_visual_graph_1_03.pkl'), 'rb'))
 
         else:
             self.vqa = json.load(
-                open(os.path.join(data_dir, 'question_graph/trainval_data_2/vqa_test_toked_q_graph.json')))
+                open(os.path.join(data_dir, 'question_graph/trainval_data/vqa_test_q_graph.json')))
                 #open(os.path.join(data_dir, 'vqa_test_toked.json')))
             self.i_feat = zarr.open(os.path.join(
                 data_dir, 'vg_100/test.zarr'), mode='r')
@@ -253,7 +253,7 @@ class VQA_Graph_Dataset_Test(Dataset):
             self.sizes = pd.read_csv(os.path.join(
                 data_dir, 'vg_100/test_image_size.csv'))
             self.visual_graph = pickle.load(
-                    open(os.path.join(data_dir, 'question_graph/visual_graph/test_visual_graph_1_03.pkl'), 'rb'))
+                    open(os.path.join(data_dir, 'visual_graph/vg_100/test_visual_graph_1_03.pkl'), 'rb'))
 
         self.n_questions = len(self.vqa)
         print("question loader over!")

@@ -31,11 +31,11 @@ os.system(
 # download pre-trained glove embeddings
 os.system('wget http://nlp.stanford.edu/data/glove.6B.zip -P zip/')
 
-# download rcnn extracted features (may take a while, both very large files)
-os.system(
-    'wget https://imagecaption.blob.core.windows.net/imagecaption/trainval_36.zip -P zip/')
-os.system(
-    'wget https://imagecaption.blob.core.windows.net/imagecaption/test2015_36.zip -P zip/')
+# # download rcnn extracted features (may take a while, both very large files)
+# os.system(
+#     'wget https://imagecaption.blob.core.windows.net/imagecaption/trainval_36.zip -P zip/')
+# os.system(
+#     'wget https://imagecaption.blob.core.windows.net/imagecaption/test2015_36.zip -P zip/')
 
 # extract them
 os.system('unzip zip/v2_Questions_Train_mscoco.zip -d raw/')
@@ -44,5 +44,5 @@ os.system('unzip zip/v2_Questions_Test_mscoco.zip -d raw/')
 os.system('unzip zip/v2_Annotations_Train_mscoco.zip -d raw/')
 os.system('unzip zip/v2_Annotations_Val_mscoco.zip -d raw/')
 os.system('unzip zip/glove.6B.zip -d ./')
-os.system('unzip zip/trainval_36.zip -d raw/')
-os.system('unzip zip/test2015_36.zip -d raw/')
+# os.system('unzip zip/trainval_36.zip -d visual_36/')
+# os.system('unzip zip/test2015_36.zip -d visual_36/')

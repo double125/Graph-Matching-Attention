@@ -12,9 +12,7 @@ import re
 import en_core_web_sm
 
 import sys
-sys.path.append("..")
-import stanford_corenlp_master
-from stanford_corenlp_master import stanfordcorenlp
+import stanfordcorenlp
 from stanfordcorenlp import StanfordCoreNLP
 import numpy as np
 from tqdm import tqdm
@@ -25,7 +23,7 @@ except:
     import pickle
 
 print('load nlp model...')
-nlp = StanfordCoreNLP(r'stanford_corenlp_master/stanford_corenlp_full_2018_10_05')
+nlp = StanfordCoreNLP(r'/hdd1/caojianjian/stanford_corenlp_master/stanford-corenlp-full-2018-10-05')
 print("nlp model load over!")
 
 # this is used for normalizing questions
@@ -272,8 +270,8 @@ if __name__ == '__main__':
     ## test data
     testdev_questions = json.load(open('raw/v2_OpenEnded_mscoco_test-dev2015_questions.json'))
     test_questions = json.load(open('raw/v2_OpenEnded_mscoco_test2015_questions.json'))
-    
-    ## save dir
+
+    # save dir
     save_dir = '../VQA/question_graph'
     data_train = save_dir + '/train_data'
     data_trainval = save_dir + '/trainval_data'
@@ -282,7 +280,7 @@ if __name__ == '__main__':
 
     if not os.path.exists(data_trainval):
         os.makedirs(data_trainval)
-
+    
     ## build the final answer dictionary
     answers = train_answers + val_answers
     filter_answers(answers, 9)
