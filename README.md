@@ -39,6 +39,7 @@ sh build_graph.sh
 ```
 ### Pretrained features for VQA dataset
 For ease-of-use, we use the [pretrained features](https://github.com/peteanderson80/bottom-up-attention#pretrained-features) available for the entire MSCOCO dataset. Features are stored in tsv (tab-separated-values) format that can be downloaded from the links below,
+
 10 to 100 features per image (adaptive):
 * [2014 Train/Val Image Features (120K / 23GB)](https://storage.googleapis.com/up-down-attention/trainval.zip)
 * [2014 Testing Image Features (40K / 7.3GB)](https://storage.googleapis.com/up-down-attention/test2014.zip)
