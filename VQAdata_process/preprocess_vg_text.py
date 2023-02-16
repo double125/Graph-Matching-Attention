@@ -246,10 +246,10 @@ if __name__ == '__main__':
     img_id2val = pickle.load(open('./imgids/val_imgid2idx.pkl','rb'))
     process_vg(qas, idx, img_id2val, ans2label, 'val')
 
-    vg_q_graph = json.load(open('./vg_aug_train_q_graph.json')) + json.load(open('./vg_aug_val_q_graph.json'))
+    vg_q_graph = json.load(open('../VQA/question_graph/trainval_data/vg_aug_train_q_graph.json')) + json.load(open('../VQA/question_graph/trainval_data/vg_aug_val_q_graph.json'))
     question_graph_dict = process_answers(vg_q_graph)
-    json.dump(question_graph_dict, open('vg_aug_q_graph.json', 'w'))
+    json.dump(question_graph_dict, open('../VQA/question_graph/trainval_data/vg_aug_q_graph.json', 'w'))
 
-    question_graph_all = json.load(open('./vqa_train_q_graph.json')) + json.load(open('./vqa_val_q_graph.json')) + json.load(open('./vqa_test_q_graph.json')) + json.load(open('./vg_aug_q_graph.json'))
+    question_graph_all = json.load(open('../VQA/question_graph/train_data/vqa_train_q_graph.json')) + json.load(open('../VQA/question_graph/train_data/vqa_val_q_graph.json')) + json.load(open('../VQA/question_graph/trainval_data/vqa_test_q_graph.json')) + json.load(open('../VQA/question_graph/trainval_data/vg_aug_q_graph.json'))
     process_questions(question_graph_all, 'all_aug')
     print('Done')
