@@ -37,6 +37,7 @@ To preprocess the image data and text data the following commands can be execute
 ``` 
 sh build_graph.sh
 ```
+
 ### Pretrained features for VQA dataset
 For ease-of-use, we use the [pretrained features](https://github.com/peteanderson80/bottom-up-attention#pretrained-features) available for the entire MSCOCO dataset. Features are stored in tsv (tab-separated-values) format that can be downloaded from the links below,
 
@@ -55,6 +56,10 @@ we use extra data from [Visual Genome](http://visualgenome.org/). The question a
 * [visualgenome_qa.zip](https://drive.google.com/file/d/1QKe4TKiYnn4pk_48z_mLxF7xaf2VH8Ut/view?usp=sharing)
 * [image_data.json](https://drive.google.com/file/d/1UEaC5zmDQdR5Q-pqAj9f3zSunD0-Uhgd/view?usp=share_link)
 * [question_answers.json](https://drive.google.com/file/d/1Od5d5Nv7NyodABsx1WOQtbS5ZFfd8EqN/view?usp=sharing)
+* [imgids.zip](https://drive.google.com/file/d/1X7xcbKDZB6oSe_qLwrVAGn9Zz3rcjxo-/view?usp=sharing)
+
+## GQA dataset
+Download the GQA dataset from [https://cs.stanford.edu/people/dorarad/gqa/](https://cs.stanford.edu/people/dorarad/gqa/)
 
 ## Training
 To train a model on the train set with our default parameters run
