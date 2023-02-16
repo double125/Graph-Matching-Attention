@@ -183,7 +183,7 @@ def process_questions(q, phase):
     # a 1-indexed vocab translation table
     itow = {i+1: w for i, w in enumerate(vocab)}
     wtoi = {w: i+1 for i, w in enumerate(vocab)}  # inverse table
-    pickle.dump({'itow': itow, 'wtoi': wtoi}, open('../VQA/question_graph/train_data/vqa_' + phase + '_q_dict2.p', 'wb'))
+    pickle.dump({'itow': itow, 'wtoi': wtoi}, open('../VQA/question_graph/train_data/vqa_' + phase + '_q_dict.p', 'wb'))
 
 def build_question_graph(qa, phase):
     print('Building ' + phase +' question graph...')
