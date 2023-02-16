@@ -272,6 +272,16 @@ if __name__ == '__main__':
     ## test data
     testdev_questions = json.load(open('raw/v2_OpenEnded_mscoco_test-dev2015_questions.json'))
     test_questions = json.load(open('raw/v2_OpenEnded_mscoco_test2015_questions.json'))
+    
+    ## save dir
+    save_dir = '../VQA/question_graph'
+    data_train = save_dir + '/train_data'
+    data_trainval = save_dir + '/trainval_data'
+    if not os.path.exists(data_train):
+        os.makedirs(data_train)
+
+    if not os.path.exists(data_trainval):
+        os.makedirs(data_trainval)
 
     ## build the final answer dictionary
     answers = train_answers + val_answers
