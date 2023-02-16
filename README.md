@@ -34,7 +34,7 @@ To download and unzip the required datasets, change to the data folder and run
 cd VQAdata_process; python tools/download_data.py
 ```
 ### build question graph
-for VG dataset which is the extra dataset, we download and put those zip files to `VQAdata_process/zip/` folder and unzip them before build question graph for VG datasets.
+For VG dataset, it is the extra dataset for VQA tasks, we download it and put those zip files to `VQAdata_process/zip/` folder. After that unzip them before build question graph for VG datasets.
 ```
 cd VQAdata_process; mkdir VG 
 unzip zip/question_answers.json.zip -d ./VG
