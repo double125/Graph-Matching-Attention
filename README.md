@@ -60,6 +60,14 @@ we use extra data from [Visual Genome](http://visualgenome.org/). The question a
 * [question_answers.json.zip](https://drive.google.com/file/d/16RYCz58WxKf7INk3ai268fXIfjr5Czqy/view?usp=sharing)
 * [imgids.zip](https://drive.google.com/file/d/1X7xcbKDZB6oSe_qLwrVAGn9Zz3rcjxo-/view?usp=sharing)
 
+we put thoes zip files to `~/VQAdata_process/zip/` folder and unzip them before build question graph for VG datasets.
+```
+cd VQAdata_process; mkdir VG 
+unzip zip/question_answers.json.zip -d ./VG
+unzip zip/image_data.json.zip -d ./VG
+unzip zip/imgids.zip -d ./VG/imgids
+```
+
 ## GQA dataset
 Download the GQA dataset from [https://cs.stanford.edu/people/dorarad/gqa/](https://cs.stanford.edu/people/dorarad/gqa/)
 
