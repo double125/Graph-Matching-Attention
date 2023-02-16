@@ -33,14 +33,35 @@ To download and unzip the required datasets, change to the data folder and run
 ```
 cd VQAdata_process; python tools/download_data.py
 ```
+### build question graph
+for VG dataset which is the extra dataset, we download and put thoes zip files to `VQAdata_process/zip/` folder and unzip them before build question graph for VG datasets.
+```
+cd VQAdata_process; mkdir VG 
+unzip zip/question_answers.json.zip -d ./VG
+unzip zip/image_data.json.zip -d ./VG
+unzip zip/imgids.zip -d ./VG/imgids
+``` 
+#### VG dataset
+we use extra data from [Visual Genome](http://visualgenome.org/). The question and answer pairs can be downloaded from the links below,
+* [visualgenome_qa.zip](https://drive.google.com/file/d/1QKe4TKiYnn4pk_48z_mLxF7xaf2VH8Ut/view?usp=sharing)
+* [image_data.json.zip](https://drive.google.com/file/d/1SLvZ9GbnRMCM-MmJBBP4OGjuDeTMsEBF/view?usp=sharing)
+* [question_answers.json.zip](https://drive.google.com/file/d/16RYCz58WxKf7INk3ai268fXIfjr5Czqy/view?usp=sharing)
+* [imgids.zip](https://drive.google.com/file/d/1X7xcbKDZB6oSe_qLwrVAGn9Zz3rcjxo-/view?usp=sharing)
 
 To preprocess the image data and text data the following commands can be executed respectively. 
 
 ``` 
-sh build_graph.sh
+sh build_question_graph.sh
+```
+### build visual graph
+First we should download the pretrained features of image and put it to the `VQAdata_process/visual_100/` or `VQAdata_process/visual_36/` and unzip them before build visual graph for VQA datasets. Note this code can support both type.
+
+```
+sh build_visual_graph_100.sh
+# sh build_visual_graph_36.sh
 ```
 
-### Pretrained features for VQA dataset
+#### Pretrained features for VQA dataset
 For ease-of-use, we use the [pretrained features](https://github.com/peteanderson80/bottom-up-attention#pretrained-features) available for the entire MSCOCO dataset. Features are stored in tsv (tab-separated-values) format that can be downloaded from the links below,
 
 10 to 100 features per image (adaptive):
@@ -53,43 +74,29 @@ For ease-of-use, we use the [pretrained features](https://github.com/peteanderso
 * [2014 Testing Image Features (40K / 9GB)](https://storage.googleapis.com/up-down-attention/test2014_36.zip)
 * [2015 Testing Image Features (80K / 17GB)](https://storage.googleapis.com/up-down-attention/test2015_36.zip)
 
-### VG dataset
-we use extra data from [Visual Genome](http://visualgenome.org/). The question and answer pairs can be downloaded from the links below,
-* [visualgenome_qa.zip](https://drive.google.com/file/d/1QKe4TKiYnn4pk_48z_mLxF7xaf2VH8Ut/view?usp=sharing)
-* [image_data.json.zip](https://drive.google.com/file/d/1SLvZ9GbnRMCM-MmJBBP4OGjuDeTMsEBF/view?usp=sharing)
-* [question_answers.json.zip](https://drive.google.com/file/d/16RYCz58WxKf7INk3ai268fXIfjr5Czqy/view?usp=sharing)
-* [imgids.zip](https://drive.google.com/file/d/1X7xcbKDZB6oSe_qLwrVAGn9Zz3rcjxo-/view?usp=sharing)
 
-we put thoes zip files to `~/VQAdata_process/zip/` folder and unzip them before build question graph for VG datasets.
-```
-cd VQAdata_process; mkdir VG 
-unzip zip/question_answers.json.zip -d ./VG
-unzip zip/image_data.json.zip -d ./VG
-unzip zip/imgids.zip -d ./VG/imgids
-```
-
-## GQA dataset
+### GQA dataset
 Download the GQA dataset from [https://cs.stanford.edu/people/dorarad/gqa/](https://cs.stanford.edu/people/dorarad/gqa/)
 
-## Training
+### Training
 To train a model on the train set with our default parameters run
 ```
-python3 -u train.py --train --bsize 256 --data_type VQA --data_dir ../data/VQA --save_dir ./trained_model
+python3 -u train.py --train --bsize 256 --data_type VQA --data_dir ./VQA --save_dir ./trained_model
 ```
 
 and to train a model on the train and validation set for evaluation on the test set run
 ```
-python3 -u train.py --trainval --bsize 256 --data_type VQA --data_dir ../data/VQA --save_dir ./trained_model
+python3 -u train.py --trainval --bsize 256 --data_type VQA --data_dir ./VQA --save_dir ./trained_model
 ```
 ## Evaluation
 Models can be validated via
 ```
-python3 -u train.py --eval --model_path ./trained_model/model.pth.tar --data_type VQA --data_dir ../data/VQA --bsize 256
+python3 -u train.py --eval --model_path ./trained_model/model.pth.tar --data_type VQA --data_dir ./VQA --bsize 256
 ```
 
 and a json of results from the test set can be produced with
 ```
-python3 -u train.py --test --model_path ./trained_model/model.pth.tar --data_type VQA --data_dir ../data/VQA --bsize 256
+python3 -u train.py --test --model_path ./trained_model/model.pth.tar --data_type VQA --data_dir ./VQA --bsize 256
 ```
 ## Citation
 We hope our paper, data and code can help in your research. If this is the case, please cite:
